@@ -63,7 +63,7 @@ public class signin extends HttpServlet {
             }
             else
             {
-                out.print("NOT EMPLOYEE");
+                
                 boolean customerLogin;
                 queryCheck = "SELECT AccountNo from customer WHERE AccountNo = ? and Password = ?"; //GET Customer
                 ps = con.prepareStatement(queryCheck);    //Prepared statements are new commands we didnt make
@@ -83,7 +83,10 @@ public class signin extends HttpServlet {
                 }
                 else
                 {
-                   out.print("LOGIN CUSTO FAILED");
+                    String err = "Incorrect Login Information";
+                    request.setAttribute("err", err);
+                    request.getRequestDispatcher("index.jsp").forward(request, response);
+                    
                 }
             }
             
