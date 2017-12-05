@@ -79,14 +79,17 @@ public class signin extends HttpServlet {
                 
                 if(customerLogin == true)                   // IF CUSTOMER LOGIN MATCHES
                 {   
-                   response.sendRedirect("customerHome.jsp");
+                  
+                   request.setAttribute("username", username);
+                   
+                   request.getRequestDispatcher("customerHome.jsp").forward(request, response);
                 }
                 else
                 {
                     String err = "Incorrect Login Information";
                     request.setAttribute("err", err);
                     request.getRequestDispatcher("index.jsp").forward(request, response);
-                    
+                   
                 }
             }
             

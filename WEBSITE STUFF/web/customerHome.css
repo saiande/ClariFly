@@ -1,0 +1,74 @@
+body {
+    background-image: url('city.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size:cover;
+}
+
+
+
+header{
+background-color: aliceblue;
+border: 1px solid #ccc;
+margin:0;
+padding:0;
+width: 100%;
+height: 90px;
+opacity: .8;
+}
+
+
+#logo{
+display: inline-block;
+padding-left: 20px;
+max-height: 100px;
+color: gray;
+
+}
+
+nav{
+    display:inline;
+    float:right;
+    margin-right: 30px;
+    
+}
+
+nav ul{
+    list-style:none;
+    
+}
+
+
+nav ul li{
+    display:inline-block;
+    margin-right: 10px;
+    text-transform: uppercase;
+   
+    
+}
+
+a{
+    text-decoration: none;
+}
+
+.button {
+  color: gray;
+    border: 1px solid white;
+    padding: 20px 20px;
+    margin-left: 00px;
+    margin-right: 10px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    min-width: 200px;
+    transition: all 0.4s;
+}
+.button:hover{
+    border-color: aquamarine;
+    transition: all 0.4s;
+    opacity: .8;
+    transform: scale(1.1);   
+   
+}

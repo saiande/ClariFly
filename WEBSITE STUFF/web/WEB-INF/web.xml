@@ -8,6 +8,10 @@
         <servlet-name>signin</servlet-name>
         <servlet-class>signin</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>createAccount</servlet-name>
+        <servlet-class>createAccount</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>MyDB</servlet-name>
         <url-pattern>/MyDB</url-pattern>
@@ -15,6 +19,10 @@
     <servlet-mapping>
         <servlet-name>signin</servlet-name>
         <url-pattern>/signin</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>createAccount</servlet-name>
+        <url-pattern>/createAccount</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
