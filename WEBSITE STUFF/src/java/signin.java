@@ -65,7 +65,7 @@ public class signin extends HttpServlet {
             {
                 
                 boolean customerLogin;
-                queryCheck = "SELECT AccountNo from customer WHERE AccountNo = ? and Password = ?"; //GET Customer
+                queryCheck = "SELECT Username from customer WHERE Username = ? and Password = ?"; //GET Customer
                 ps = con.prepareStatement(queryCheck);    //Prepared statements are new commands we didnt make
                 ps.setString(1, username);                        
                 ps.setString(2, password);

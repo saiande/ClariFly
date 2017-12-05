@@ -66,7 +66,7 @@ public class createAccount extends HttpServlet {
         id = rs.getInt(1);  
         }
         id++;
-        CallableStatement cs = db.getCon().prepareCall("{call AddCustomer(?,?,?,?,?,?,?,?,?,?,?,?,?,?)}");
+        CallableStatement cs = db.getCon().prepareCall("{call AddCustomer(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)}");
         cs.setInt(1, id);
         cs.setString(2, fname);
         cs.setString(3, lname);
@@ -81,7 +81,8 @@ public class createAccount extends HttpServlet {
         cs.setInt(12,rating);
         cs.setString(13,password);
         cs.setString(14,username);
-       
+        cs.setString(15,"none");
+        cs.setString(16, telephone);
         cs.execute();
         
         String createdAcc = "Account Made";
