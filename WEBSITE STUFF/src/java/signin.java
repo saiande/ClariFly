@@ -39,6 +39,7 @@ public class signin extends HttpServlet {
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
            //-------------------------------------------------------------------------------------------------
+           //out.println("test");
            String username = request.getParameter("username");   //GETTING VARIABLES FROM LAST FORM
            String password = request.getParameter("password");   //GETTING VARIABLES FROM LAST FORM
            MyDB db = new MyDB();                                // OPENING MY DB OBJECT
@@ -50,6 +51,7 @@ public class signin extends HttpServlet {
             ps.setString(2, password);                                  //set the pass as the 2nd ?
             ResultSet rs = ps.executeQuery();                       // results from db search
             
+            out.println("signin");
             boolean isEmployee ;
             if(!rs.isBeforeFirst())                     // CHECK IF RESULT SET IS EMPTY
                 isEmployee = false;

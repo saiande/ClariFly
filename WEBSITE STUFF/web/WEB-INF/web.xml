@@ -8,6 +8,18 @@
         <servlet-name>signin</servlet-name>
         <servlet-class>signin</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>cust_by_acct</servlet-name>
+        <servlet-class>cust_by_acct</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>cust_by_acct2</servlet-name>
+        <servlet-class>cust_by_acct2</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>cust_rep_flight_sug</servlet-name>
+        <servlet-class>cust_rep_flight_sug</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>MyDB</servlet-name>
         <url-pattern>/MyDB</url-pattern>
@@ -15,6 +27,18 @@
     <servlet-mapping>
         <servlet-name>signin</servlet-name>
         <url-pattern>/signin</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>cust_by_acct</servlet-name>
+        <url-pattern>/cust_by_acct</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>cust_by_acct2</servlet-name>
+        <url-pattern>/cust_by_acct2</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>cust_rep_flight_sug</servlet-name>
+        <url-pattern>/cust_rep_flight_sug</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
