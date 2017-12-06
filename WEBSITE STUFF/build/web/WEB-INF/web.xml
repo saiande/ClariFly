@@ -12,6 +12,14 @@
         <servlet-name>createAccount</servlet-name>
         <servlet-class>createAccount</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>searchOneWay</servlet-name>
+        <servlet-class>searchOneWay</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>buyOneWay</servlet-name>
+        <servlet-class>buyOneWay</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>MyDB</servlet-name>
         <url-pattern>/MyDB</url-pattern>
@@ -23,6 +31,14 @@
     <servlet-mapping>
         <servlet-name>createAccount</servlet-name>
         <url-pattern>/createAccount</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>searchOneWay</servlet-name>
+        <url-pattern>/searchOneWay</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>buyOneWay</servlet-name>
+        <url-pattern>/buyOneWay</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

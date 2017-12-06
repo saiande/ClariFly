@@ -10,7 +10,7 @@
     <head>
        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>clariFLY</title>
-         <link rel="stylesheet" type="text/css" media="all" href="index.css"> <!-- Connects a style sheet to code-->
+         <link rel="stylesheet" type="text/css" media="all" href="indexJSP.css"> <!-- Connects a style sheet to code-->
     </head>
    
     <body> <!-- all real code goes in body-->
