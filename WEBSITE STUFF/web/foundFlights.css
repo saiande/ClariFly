@@ -75,6 +75,13 @@ a{
 }
 
 .flights{
+   
+     
+}
+
+.flightInfo{
+    margin-bottom: 20px;
+    padding-bottom: 20px;
     color: white;
     background-color: black;
     margin:0 auto;
@@ -84,12 +91,6 @@ a{
     height: 100px;
     opacity: .8;
      border: 5px solid #EB5168;
-     
-}
-
-.flightInfo{
-    margin-bottom: 20px;
-    padding-bottom: 20px;
 }
 .flightInfo ul{
     display:inline;
@@ -129,3 +130,9 @@ a{
     transform: scale(1.1);   
    
 }
+form{
+    display:inline;
+  
+
+}
+

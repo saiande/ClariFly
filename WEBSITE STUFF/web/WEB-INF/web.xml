@@ -20,6 +20,14 @@
         <servlet-name>buyOneWay</servlet-name>
         <servlet-class>buyOneWay</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>tabs</servlet-name>
+        <servlet-class>tabs</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>searchRoundTrip</servlet-name>
+        <servlet-class>searchRoundTrip</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>MyDB</servlet-name>
         <url-pattern>/MyDB</url-pattern>
@@ -39,6 +47,14 @@
     <servlet-mapping>
         <servlet-name>buyOneWay</servlet-name>
         <url-pattern>/buyOneWay</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>tabs</servlet-name>
+        <url-pattern>/tabs</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>searchRoundTrip</servlet-name>
+        <url-pattern>/searchRoundTrip</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

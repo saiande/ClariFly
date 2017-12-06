@@ -58,8 +58,23 @@ public class signin extends HttpServlet {
            
             if(isEmployee == true)
             {
-                // DECIDE IF MANAGER OR NOT! THEN LOAD CORRECT PAGE
-                out.println("IS EMPLOYEE");
+                boolean manager = false;
+                queryCheck = "SELECT IsManager from employee WHERE Username = ? and IsManager = ?"; //GET Customer
+                ps = con.prepareStatement(queryCheck);    //Prepared statements are new commands we didnt make
+                ps.setString(1, username);   
+                ps.setInt(1, 1); 
+                rs = ps.executeQuery();    
+                
+                if(!rs.isBeforeFirst())                     // CHECK IF RESULT SET IS EMPTY
+                    manager = false;
+                else
+                    manager = true;
+                
+                if(manager){
+                    
+                }else{
+                    
+                }
             }
             else
             {

@@ -16,12 +16,35 @@
             <img id = "logo" src="clariFLY.png" alt="logo">
             <nav>
                 <ul>
-                    <li><button type = "button" class = "button" onclick="window.location='customerHome.jsp'">HOME</button> </li>
-                    <li><button type = "button" class = "button" onclick="window.location='index.jsp'">MY ACCOUNT</button> </li>
-                    <li><button type = "button" class = "button" onclick="window.location='index.jsp'">MY RESERVATIONS</button> </li>
-                    <li><button type = "button" class = "button" onclick="window.location='index.jsp'">MY AUCTIONS</button> </li>
-                    <li><button type = "button" class = "button" onclick="window.location='index.jsp'">LOG OUT</button> </li>
-                    <li><button type = "button" class = "button" onclick="window.location='index.jsp'">HELP</button> </li>
+                    <form action ="tabs" method = "post"> 
+                         <input type="hidden" name="username" value="<%=(String )request.getParameter("username") %>"> 
+                         <input type="hidden" name="tab" value="home"> 
+                        <li><button type = "submit" class = "button" >HOME</button> </li>
+                     </form>
+                    <form action ="tabs" method = "post"> 
+                         <input type="hidden" name="username" value="<%=(String )request.getParameter("username") %>">
+                         <input type="hidden" name="tab" value="acc"> 
+                        <li><button type = "submit" class = "button" >MY ACCOUNT</button> </li>
+                    </form>
+                    <form action ="tabs" method = "post"> 
+                         <input type="hidden" name="username" value="<%=(String )request.getParameter("username") %>"> 
+                         <input type="hidden" name="tab" value="res"> 
+                        <li><button type = "submit" class = "button" >MY RESERVATIONS</button> </li>
+                    </form>
+                    <form action ="tabs" method = "post"> 
+                         <input type="hidden" name="username" value="<%=(String )request.getParameter("username") %>"> 
+                         <input type="hidden" name="tab" value="auc"> 
+                        <li><button type = "submit" class = "button" >MY AUCTIONS</button> </li>
+                    </form>
+                    <form action ="tabs" method = "post"> 
+                       
+                     <li><button type = "button" class = "button" onclick="window.location='index.jsp'">LOG OUT</button> </li>
+                    </form>
+                    <form action ="tabs" method = "post"> 
+                         <input type="hidden" name="username" value="<%=(String )request.getParameter("username") %>"> 
+                          <input type="hidden" name="tab" value="help"> 
+                        <li><button type = "submit" class = "button" >HELP</button> </li>
+                    </form>
                 </ul>
             </nav>
         </header>
