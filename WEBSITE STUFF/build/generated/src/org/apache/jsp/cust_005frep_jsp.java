@@ -63,7 +63,7 @@ public final class cust_005frep_jsp extends org.apache.jasper.runtime.HttpJspBas
       out.write("    <head>\n");
       out.write("        <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\n");
       out.write("        <title>clariFLY</title>\n");
-      out.write("         <link rel=\"stylesheet\" type=\"text/css\" media=\"all\" href=\"index.css\">\n");
+      out.write("         <link rel=\"stylesheet\" type=\"text/css\" media=\"all\" href=\"customerHome.css\">\n");
       out.write("    </head>\n");
       out.write("    ");
       out.write("\n");

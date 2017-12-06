@@ -38,6 +38,7 @@ public class cust_by_acct2 extends HttpServlet {
         try (PrintWriter out = response.getWriter()) {
              MyDB db = new MyDB();                                // OPENING MY DB OBJECT
             java.sql.Connection con = db.getCon(); 
+            String acct = request.getParameter("Account Number");
             int acctno= Integer.parseInt(request.getParameter("Account Number"));
             String fname= request.getParameter("First name");
             String lname= request.getParameter("Last name");
@@ -90,47 +91,49 @@ public class cust_by_acct2 extends HttpServlet {
             cs.setInt(1,acctno);
             cs.setString(2, preference);
             cs.executeQuery();
-            request.getRequestDispatcher("cust_rep_success.html").forward(request, response);
+            //request.getRequestDispatcher("cust_rep_success.html").forward(request, response);
 
-//        
-//cs = con.prepareCall("{call clarifly.CustomerInfoByAcctNo(?)}");
-//            cs.se/tInt(1,acctno);
-//            ResultSet rs = cs.executeQuery();
-//            //out.println(email);
-//            String updated = "true";
-//            while(rs.next()){
-//                out.println(email);
-////                String fname = rs.getString(1);
-////                String lname = rs.getString(2);
-////                String address = rs.getString(3);
-////                String city = rs.getString(4);
-////                String state = rs.getString(5);
-////                int zipcode = rs.getInt(6);
-////                String telephone = rs.getString(7);
-////                String creditcard = rs.getString(8);
-////                String email = rs.getString(9);
-////                int rating = rs.getInt(10);
-//                request.setAttribute("acctno", acctno);
-//                out.println("1");
-//                request.setAttribute("fname", rs.getString(1));
-//                request.setAttribute("lname", rs.getString(2));
-//                request.setAttribute("address", rs.getString(3));
-//                request.setAttribute("city", rs.getString(4));
-//                out.println("1");
-//
-//                request.setAttribute("state", rs.getString(5));
-//                request.setAttribute("zipcode", rs.getString(6));
-//                request.setAttribute("telephone", rs.getString(7));
-//                request.setAttribute("credit", rs.getString(8));
-//                out.println("1");
-//
-//                request.setAttribute("email", rs.getString(9));
-//                request.setAttribute("rating", rs.getString(10));
-//                request.setAttribute("updated", updated);
-//                out.println("1");
-//                request.getRequestDispatcher("cust_rep_main.html").forward(request, response);
-//                
-//            }
+        
+            cs = con.prepareCall("{call clarifly.CustomerInfoByAcctNo(?)}");
+            cs.setInt(1,acctno);
+            ResultSet rs = cs.executeQuery();
+            //out.println(email);
+            String updated = "true";
+            while(rs.next()){
+                out.println(email);
+//                String fname = rs.getString(1);
+//                String lname = rs.getString(2);
+//                String address = rs.getString(3);
+//                String city = rs.getString(4);
+//                String state = rs.getString(5);
+//                int zipcode = rs.getInt(6);
+//                String telephone = rs.getString(7);
+//                String creditcard = rs.getString(8);
+//                String email = rs.getString(9);
+//                int rating = rs.getInt(10);
+                request.setAttribute("acctno", acct);
+                out.println("1");
+                request.setAttribute("fname", rs.getString(1));
+                request.setAttribute("lname", rs.getString(2));
+                request.setAttribute("address", rs.getString(3));
+                request.setAttribute("city", rs.getString(4));
+                out.println("1");
+
+                request.setAttribute("state", rs.getString(5));
+                request.setAttribute("zipcode", rs.getString(6));
+                request.setAttribute("telephone", rs.getString(7));
+                request.setAttribute("credit", rs.getString(8));
+                out.println("1");
+
+                request.setAttribute("email", rs.getString(9));
+                request.setAttribute("rating", rs.getString(10));
+                request.setAttribute("preference", rs.getString(11));
+                request.setAttribute("updated", updated);
+                out.println("1");
+                out.println(request.getAttribute("email"));
+                request.getRequestDispatcher("cust_rep_success.jsp").forward(request, response);
+                
+            }
         } catch (SQLException ex) {
             Logger.getLogger(cust_by_acct2.class.getName()).log(Level.SEVERE, null, ex);
         }

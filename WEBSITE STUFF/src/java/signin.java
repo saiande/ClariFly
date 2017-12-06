@@ -39,7 +39,6 @@ public class signin extends HttpServlet {
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
            //-------------------------------------------------------------------------------------------------
-           //out.println("test");
            String username = request.getParameter("username");   //GETTING VARIABLES FROM LAST FORM
            String password = request.getParameter("password");   //GETTING VARIABLES FROM LAST FORM
            MyDB db = new MyDB();                                // OPENING MY DB OBJECT
@@ -51,7 +50,6 @@ public class signin extends HttpServlet {
             ps.setString(2, password);                                  //set the pass as the 2nd ?
             ResultSet rs = ps.executeQuery();                       // results from db search
             
-            out.println("signin");
             boolean isEmployee ;
             if(!rs.isBeforeFirst())                     // CHECK IF RESULT SET IS EMPTY
                 isEmployee = false;
@@ -60,14 +58,32 @@ public class signin extends HttpServlet {
            
             if(isEmployee == true)
             {
-                // DECIDE IF MANAGER OR NOT! THEN LOAD CORRECT PAGE
-                out.println("IS EMPLOYEE");
+                boolean manager = false;
+                queryCheck = "SELECT IsManager from employee WHERE SSN = ?"; //GET Customer
+                ps = con.prepareStatement(queryCheck);    //Prepared statements are new commands we didnt make
+                ps.setInt(1, Integer.parseInt(username));   
+                //ps.setInt(1, 1); 
+                rs = ps.executeQuery();    
+                
+                while(rs.next()){
+                if(rs.getInt(1) == 0)                     // CHECK IF RESULT SET IS EMPTY
+                    manager = false;
+                else
+                    manager = true;
+                }
+                if(manager){
+                    
+                }else{
+                    request.setAttribute("username", username);
+                   
+                   request.getRequestDispatcher("cust_rep.jsp").forward(request, response);
+                }
             }
             else
             {
-                out.print("NOT EMPLOYEE");
+                
                 boolean customerLogin;
-                queryCheck = "SELECT AccountNo from customer WHERE AccountNo = ? and Password = ?"; //GET Customer
+                queryCheck = "SELECT Username from customer WHERE Username = ? and Password = ?"; //GET Customer
                 ps = con.prepareStatement(queryCheck);    //Prepared statements are new commands we didnt make
                 ps.setString(1, username);                        
                 ps.setString(2, password);
@@ -81,11 +97,17 @@ public class signin extends HttpServlet {
                 
                 if(customerLogin == true)                   // IF CUSTOMER LOGIN MATCHES
                 {   
-                   response.sendRedirect("customerHome.jsp");
+                  
+                   request.setAttribute("username", username);
+                   
+                   request.getRequestDispatcher("customerHome.jsp").forward(request, response);
                 }
                 else
                 {
-                   out.print("LOGIN CUSTO FAILED");
+                    String err = "Incorrect Login Information";
+                    request.setAttribute("err", err);
+                    request.getRequestDispatcher("index.jsp").forward(request, response);
+                   
                 }
             }
             

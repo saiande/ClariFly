@@ -13,7 +13,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>clariFLY</title>
-        <link rel="stylesheet" type="text/css" media="all" href="index.css">
+        <link rel="stylesheet" type="text/css" media="all" href="cust_rep.css">
 
     </head>
     <%!
@@ -23,17 +23,17 @@
       
     <body>
         <header>
+            <br>
             <nav>
                 <ul>
                     <li><a href="cust_rep.jsp">Reservation</a></li>
-                    <li><a href="emp_edit_cust.jsp">Customer Info</a></li>
-                    <li><a href="emp_mailing.jsp">Mailing</a></li>
-                    <li><a href="flight_sug.jsp">Flight Suggestions</a></li>
-                    <li><a href="emp_info.jsp">Employee Info</a></li>
+                    <li><a href="cust_rep_main.html">Customer Info</a></li>
+                    <li><a href="cust_rep_emp_mailing.jsp">Mailing</a></li>
+                    <li><a href="cust_rep_flight_sug.html">Flight Suggestions</a></li>
+                    <li><a href="cust_rep_emp_info.jsp">Employee Info</a></li>
                 </ul>
             </nav>
         </header>
-        <br><br>
         <h1>Edit Customer Information</h1>
         
         <%
@@ -54,7 +54,7 @@
         <form action="cust_by_acct2" method="POST">
         <label>Account Number:</label> <input id="fix" class = "textbox" type = "text" name="Account Number" value="<%=Integer.parseInt(acctno)%>" required maxlength="50"readonly> <br> <!-- "username is just text, input type is an input (can be button/text/etc), name is variable name-->
        <label>First Name:</label> <input id="fix" class = "textbox" type = "text" name="First name" value="<%=fname%>" required maxlength="50"> <br> <!-- "username is just text, input type is an input (can be button/text/etc), name is variable name-->
-        <label>Last Name:</label> <input class = "textbox" type = "password" name="Last name" value="<%=lname%>"required maxlength="50"><br>
+        <label>Last Name:</label> <input class = "textbox" type = "text" name="Last name" value="<%=lname%>"required maxlength="50"><br>
         <label>Email:</label> <input id="fix" class = "textbox" type = "email" name="Email" value="<%=email%>"required maxlength="50"> <br>
         <label>Telephone:</label> <input id="fix" class = "textbox" type = "text" name="Telephone" value="<%=telephone%>"  maxlength="12" required> <br> 
         <label>Street:</label> <input id="fix" class = "textbox" type = "text" name="Address" value="<%=address%>"required maxlength="50"> <br>

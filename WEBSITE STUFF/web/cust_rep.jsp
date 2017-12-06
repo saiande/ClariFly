@@ -15,7 +15,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>clariFLY</title>
-         <link rel="stylesheet" type="text/css" media="all" href="index.css">
+         <link rel="stylesheet" type="text/css" media="all" href="customerHome.css">
     </head>
     <%!
         java.sql.Connection con;
@@ -24,6 +24,7 @@
     %>
     <body>
         <header>
+            <br>
             <nav>
                 <ul>
                     <li><a href="cust_rep.jsp">Reservation</a></li>
