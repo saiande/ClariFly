@@ -21,13 +21,30 @@
         String fname, lname, address, city, state, telephone, manager, hr;
         String zipcode, updated, empID;
      %>
-      
-    <body>
-        <header>
-            <br>
-            
+      <header>
+         <img style="position: fixed;"id = "logo" src="clariFLY.png" alt="logo">
+            <nav>
+                <ul>
+                        <li><a href="managerHome.jsp"><button class = "button"type="button">Home</button></a></li>
+                    <li><a href="customers.jsp"><button class = "button"type="button">Customers</button></a></li>
+                    <li><a href="employees.jsp"><button class = "button"type="button">Employees</button></a></li>
+                    <li><a href="flights.jsp"><button class = "button"type="button">Flights</button></a></li>
+                    <li><a href="reservations.jsp"><button class = "button"type="button">Reservations</button></a></li>
+                    <li><a href="sales.jsp"><button class = "button"type="button">Sales</button></a></li>
+                    <li><a href="index.jsp"><button class = "button"type="button">Log Out</button></a></li>
+                    <li><select name="HELP" value="HELP" onchange="location = this.value;">
+                                <option >HELP</option>
+                            <option value="https://docs.google.com/a/stonybrook.edu/document/d/1nVfI-FAZMTHMlStglX6QR4O7nQ53vwZxJfIkLLIqYsM/edit?usp=sharing">HELP MANAGER</option>
+                            <option value="https://docs.google.com/a/stonybrook.edu/document/d/11Tlfvj21bgbuI-BSpa0dwPs0FJPdm-Jwb-UuyE5EE90/edit?usp=sharing">HELP REP</option>
+                            <option value="https://docs.google.com/a/stonybrook.edu/document/d/1NkhBWbFPCjgqBYZgST5U4G-DqHbIpJBcySO1E-jFMrc/edit?usp=sharing">HELP CUSTOMER</option>
+                           </select> </li>
+                    
+                </ul>
+            </nav>
         </header>
-        <h1>Edit Customer Information</h1>
+    <body>
+       
+        
         
         <%
         empID = (String)request.getAttribute("empID");
@@ -42,6 +59,8 @@
         updated = (String)request.getAttribute("updated");
         hr = (String)request.getAttribute("hr"); 
      %>
+     <div style ="margin-left: 35%">
+         <h1>Edit Customer Information</h1>
         <form action="EditRepServe2" method="POST">
         <label>Employee ID:</label> <input id="fix" class = "textbox" type = "text" name="Employee ID" value="<%=Integer.parseInt(empID)%>" required maxlength="50"readonly> <br> <!-- "username is just text, input type is an input (can be button/text/etc), name is variable name-->
        <label>First Name:</label> <input id="fix" class = "textbox" type = "text" name="First name" value="<%=fname%>" required maxlength="50"> <br> <!-- "username is just text, input type is an input (can be button/text/etc), name is variable name-->
@@ -54,13 +73,13 @@
         <label>Zip Code:</label> <input id="fix" class = "textbox" type = "text" name="Zipcode" value="<%=Integer.parseInt(zipcode)%>"required maxlength="15"> <br>
         <label>Manager (1 - YES, 0 - NO) :</label> <input id="fix" class = "textbox" type = "text" name="Manager" value="<%=Integer.parseInt(manager)%>"   required> <br> 
         <label>Hourly Rate:</label> <input id="fix" class = "textbox" type = "text" name="HR" value="<%=Double.parseDouble(hr)%>"   required> <br> 
-       <input type="Submit" value="Submit"/>
+       <input <button class = "button" type="Submit" value="Submit"/>
        </form>
         <%
            if(!request.getAttribute("updated").equals("not")){
        %>
        UPDATE SUCCESS
        <% } %>
-
+</div>
         </body>
 </html>

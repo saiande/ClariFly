@@ -16,27 +16,35 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>clariFLY</title>
-         <link rel="stylesheet" type="text/css" media="all" href="index.css">
+         <link rel="stylesheet" type="text/css" media="all" href="customerHome.css">
     </head>
     <%!
         java.sql.Connection con;
         CallableStatement cs;
         ResultSet rs;
     %>
-    <body>
-        <header>
-            <h1 id="logo-large" >clariFLY</h1>
+    <header>
+         <img style="position: fixed;"id = "logo" src="clariFLY.png" alt="logo">
             <nav>
                 <ul>
-                    <li><a href="managerHome.jsp">Home</a></li>
-                    <li><a href="customers.jsp">Customers</a></li>
-                    <li><a href="employees.jsp">Employees</a></li>
-                    <li><a href="flights.jsp">Flights</a></li>
-                    <li><a href="reservations.jsp">Reservations</a></li>
-                    <li><a href="sales.jsp">Sales</a></li>
+                        <li><a href="managerHome.jsp"><button class = "button"type="button">Home</button></a></li>
+                    <li><a href="customers.jsp"><button class = "button"type="button">Customers</button></a></li>
+                    <li><a href="employees.jsp"><button class = "button"type="button">Employees</button></a></li>
+                    <li><a href="flights.jsp"><button class = "button"type="button">Flights</button></a></li>
+                    <li><a href="reservations.jsp"><button class = "button"type="button">Reservations</button></a></li>
+                    <li><a href="sales.jsp"><button class = "button"type="button">Sales</button></a></li>
+                    <li><a href="index.jsp"><button class = "button"type="button">Log Out</button></a></li>
+                    <li><select name="HELP" value="HELP" onchange="location = this.value;">
+                                <option >HELP</option>
+                            <option value="https://docs.google.com/a/stonybrook.edu/document/d/1nVfI-FAZMTHMlStglX6QR4O7nQ53vwZxJfIkLLIqYsM/edit?usp=sharing">HELP MANAGER</option>
+                            <option value="https://docs.google.com/a/stonybrook.edu/document/d/11Tlfvj21bgbuI-BSpa0dwPs0FJPdm-Jwb-UuyE5EE90/edit?usp=sharing">HELP REP</option>
+                            <option value="https://docs.google.com/a/stonybrook.edu/document/d/1NkhBWbFPCjgqBYZgST5U4G-DqHbIpJBcySO1E-jFMrc/edit?usp=sharing">HELP CUSTOMER</option>
+                           </select> </li>
+                    
                 </ul>
             </nav>
         </header>
+    <body>
         <%
             try {
               Class.forName("org.gjt.mm.mysql.Driver");
@@ -52,16 +60,17 @@
            <h1>Edit Employee</h>
            <form action="EditRepServe" method="POST">
             Employee ID:
-            <input type="number" name="EID"/>
-            <input type="submit" value="Submit"/>
+            <input style =" margin-top: 10px; margin-right: 30px; font-size: 0.5em;"type="number" name="EID" required=""/>
+            <input <button class = "button"type="submit" value="Submit"/>
         </form>
            <h1>Delete Employee</h>
            <form action="DeleteRepServe" method="POST">
             Employee ID:
-            <input type="number" name="EID"/>
-            <input type="submit" value="Submit"/>
+            <input style =" margin-top: 10px; margin-right: 30px; font-size: 0.5em;" type="number" name="EID" required/>
+            <input <button class = "button"type="submit" value="Submit"/>
         </form>
-        <li><a href="createEmployee.jsp">Add Employee</a></li>
+           <br><br>
+        <a href="createEmployee.jsp"><button class = "button"type="button">Add Employee</button></a>
            <% if(request.getAttribute("createdAcc") != null){ %>
               ACCOUNT MADE 
             <% } %>

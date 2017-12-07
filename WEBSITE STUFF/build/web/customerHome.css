@@ -13,6 +13,14 @@ h1{
   text-align: center;
   color: black;
 }
+h3{
+    
+ font-size:2em; 
+  font-weight: 200;
+  line-height:1em;
+  text-align: center;
+  color: black;
+}
 .blue { color: white; }
 .yellow { color: black; }
 

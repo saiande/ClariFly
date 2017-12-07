@@ -20,7 +20,7 @@
                 <label>First Name:</label> <input id="fix" class = "textbox" type = "text" name="First name" placeholder="Jane"required maxlength="15"> <br> <!-- "username is just text, input type is an input (can be button/text/etc), name is variable name-->
                 <label>Last Name:</label> <input class = "textbox" type = "text" name="Last name" placeholder="Doe"required maxlength="15"><br>
                 <label>Email:</label> <input id="fix" class = "textbox" type = "email" name="Email" placeholder="email"required maxlength="50"> <br>
-                <label>Username:</label> <input id="fix" class = "textbox" type = "text" name="Username" placeholder="username"required maxlength="10"> <br> 
+                <label>Username:</label> <input id="fix" class = "textbox" type = "text" name="Username" placeholder="username"required maxlength="10" minlength="3"> <br> 
                 <label>Password:</label> <input id="fix" class = "textbox" type = "password" name="Password" placeholder="password"required maxlength="15"> <br> 
                 <label>Telephone:</label> <input id="fix" class = "textbox" type = "text" name="Telephone" placeholder="xxx-xxx-xxxx"required maxlength="12"  onkeypress='return event.charCode >= 48 && event.charCode <= 57'> <br> 
                 <label>Street:</label> <input id="fix" class = "textbox" type = "text" name="Address" placeholder="123 elm Street"required maxlength="50"> <br>

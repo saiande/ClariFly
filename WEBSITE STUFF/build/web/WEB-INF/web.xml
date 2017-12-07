@@ -100,6 +100,14 @@
         <servlet-name>betAuction</servlet-name>
         <servlet-class>betAuction</servlet-class>
     </servlet>
+     <servlet>
+        <servlet-name>cust_rep_reserve</servlet-name>
+        <servlet-class>cust_rep_reserve</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>cust_rep_reserve</servlet-name>
+        <url-pattern>/cust_rep_reserve</url-pattern>
+    </servlet-mapping>
     <servlet-mapping>
         <servlet-name>CustomerServe</servlet-name>
         <url-pattern>/CustomerServe</url-pattern>
