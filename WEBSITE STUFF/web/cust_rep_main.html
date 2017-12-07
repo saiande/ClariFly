@@ -8,7 +8,7 @@ and open the template in the editor.
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>clariFLY</title>
-        <link rel="stylesheet" type="text/css" media="all" href="cust_rep.css">
+        <link rel="stylesheet" type="text/css" media="all" href="customerHome.css">
 
     </head>
     <body>
@@ -16,19 +16,20 @@ and open the template in the editor.
             <br>
             <nav>
                 <ul>
-                    <li><a href="cust_rep.jsp">Reservation</a></li>
-                    <li><a href="cust_rep_main.html">Customer Info</a></li>
-                    <li><a href="cust_rep_emp_mailing.jsp">Mailing</a></li>
-                    <li><a href="cust_rep_flight_sug.html">Flight Suggestions</a></li>
-                    <li><a href="cust_rep_emp_info.jsp">Employee Info</a></li>
+                     <li> <button type = "button" class = "button" onclick="window.location='cust_rep.jsp'">Reservation</button>
+                    <li> <button type = "button" class = "button" onclick="window.location='cust_rep_main.html'">Customer Info</button>
+                    <li><button type = "button" class = "button" onclick="window.location='cust_rep_emp_mailing.jsp'">Mailing</button>
+                    <li><button type = "button" class = "button" onclick="window.location='cust_rep_flight_sug.html'">Flight Suggestions</button>
+                    <li><button type = "button" class = "button" onclick="window.location='cust_rep_emp_info.jsp'">Employee Info</button>
+                    <li><button type = "button" class = "button" onclick="window.location='index.jsp'">Log Out</button>
                 </ul>
             </nav>
         </header>
         <h1>Customer Information</h1>
-        <form action="cust_by_acct" method="POST">
+        <form style="margin-left: 40%;" action="cust_by_acct" method="POST">
         Account Number
-            <input type="number" name="AcctNo"/>
-            <input type="submit" value="Submit"/>
+        <input type="number" name="AcctNo"/> <br><br>
+            <input style="margin-left: 45%;" class="button" type="submit" value="Submit"/>
         </form>
     </body>
 </html>
