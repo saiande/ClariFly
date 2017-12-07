@@ -13,7 +13,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>clariFLY</title>
-        <link rel="stylesheet" type="text/css" media="all" href="customerHomw.css">
+        <link rel="stylesheet" type="text/css" media="all" href="customerHome.css">
 
     </head>
     <%!
@@ -26,12 +26,11 @@
             <br>
             <nav>
                 <ul>
-                     <li> <button type = "button" class = "button" onclick="window.location='cust_rep.jsp'">Reservation</button>
-                    <li> <button type = "button" class = "button" onclick="window.location='cust_rep_main.html'">Customer Info</button>
-                    <li><button type = "button" class = "button" onclick="window.location='cust_rep_emp_mailing.jsp'">Mailing</button>
-                    <li><button type = "button" class = "button" onclick="window.location='cust_rep_flight_sug.html'">Flight Suggestions</button>
-                    <li><button type = "button" class = "button" onclick="window.location='cust_rep_emp_info.jsp'">Employee Info</button>
-                    <li><button type = "button" class = "button" onclick="window.location='index.jsp'">Log Out</button>
+                    <li><a href="cust_rep.jsp">Reservation</a></li>
+                    <li><a href="cust_rep_main.jsp">Customer Info</a></li>
+                    <li><a href="cust_rep_emp_mailing.jsp">Mailing</a></li>
+                    <li><a href="cust_rep_flight_sug_main.jsp">Flight Suggestions</a></li>
+                    <li><a href="cust_rep_emp_info.jsp">Employee Info</a></li>
                 </ul>
             </nav>
         </header>

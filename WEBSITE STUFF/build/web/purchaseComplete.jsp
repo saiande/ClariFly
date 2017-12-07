@@ -24,7 +24,7 @@
                     <form action ="tabs" method = "post"> 
                          <input type="hidden" name="username" value="<%=(String )request.getParameter("username") %>">
                          <input type="hidden" name="tab" value="acc"> 
-                        <li><button type = "submit" class = "button" >MY ACCOUNT</button> </li>
+                        <li><button type = "submit" class = "button" >MY RECOMMENDATIONS</button> </li>
                     </form>
                     <form action ="tabs" method = "post"> 
                          <input type="hidden" name="username" value="<%=(String )request.getParameter("username") %>"> 

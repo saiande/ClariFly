@@ -50,6 +50,8 @@ public class tabs extends HttpServlet {
         }
         else if(tab.equals("acc"))
         {
+            request.setAttribute("username", username);
+            request.getRequestDispatcher("myAccount.jsp").forward(request, response);
             
         }
         else if(tab.equals("res"))
@@ -70,7 +72,7 @@ public class tabs extends HttpServlet {
             while(rs.next())
             {
                 ArrayList<String> temp = new ArrayList();
-               // ArrayList<String> temp2 = new ArrayList();
+                ArrayList<String> temp2 = new ArrayList();
                 
                 temp.add(rs.getString(1));
                 temp.add(rs.getString(2));
@@ -81,21 +83,26 @@ public class tabs extends HttpServlet {
                 temp.add(rs.getString(7));
                 temp.add(rs.getString(8));
                     
-                   // cs = db.getCon().prepareCall("{call TravelItinerary(?)}");
-                   // cs.setInt(1,Integer.parseInt(rs.getString(1)));
-                   // ResultSet ss = cs.executeQuery();
-                   // while(ss.next()){
-                       // temp2.add(ss.getString(1));
-                       // temp2.add(ss.getString(2));
-                       // temp2.add(ss.getString(3));
-                       // temp2.add(ss.getString(4));
-                       // temp2.add(ss.getString(5));
-                       // temp2.add(ss.getString(6));
-                      //  temp2.add(ss.getString(7));
-                     //   temp2.add(ss.getString(8));
-                    //}
+                    cs = db.getCon().prepareCall("{call TravelItinerary(?)}");
+                    cs.setInt(1,Integer.parseInt(rs.getString(1)));
+                    ResultSet ss = cs.executeQuery();
+                    while(ss.next()){
+                        temp2.add(ss.getString(1));
+                        temp2.add(ss.getString(2));
+                        temp2.add(ss.getString(3));
+                        temp2.add(ss.getString(4));
+                        temp2.add(ss.getString(5));
+                        temp2.add(ss.getString(6));
+                        temp2.add(ss.getString(7));
+                        temp2.add(ss.getString(8));
+                        temp2.add(ss.getString(9));
+                        temp2.add(ss.getString(10));
+                        temp2.add(ss.getString(11));
+                        temp2.add(ss.getString(12));
+                        temp2.add(ss.getString(13));
+                    }
                 output.add(temp);
-               // output.add(temp2);
+              output.add(temp2);
             }
             
              request.setAttribute("res", output);
@@ -104,6 +111,8 @@ public class tabs extends HttpServlet {
         }
         else if(tab.equals("auc"))
         {
+            request.setAttribute("username", username);
+            request.getRequestDispatcher("myAuctions.jsp").forward(request, response);
             
         }
         else if(tab.equals("help"))

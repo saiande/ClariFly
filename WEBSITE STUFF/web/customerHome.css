@@ -11,19 +11,20 @@ h1{
   font-weight: 300;
   line-height:1em;
   text-align: center;
-  color: wheat;
+  color: black;
 }
 .blue { color: white; }
-.yellow { color: #FFF842; }
+.yellow { color: black; }
 
 table th h1 {
 	  font-weight: bold;
 	  font-size: 1em;
   text-align: left;
-  color: white;
+ 
 }
 
 table td {
+    color: black;
 	  font-weight: normal;
 	  font-size: 1em;
   -webkit-box-shadow: 0 2px 2px -2px #0E1119;
@@ -32,6 +33,7 @@ table td {
 }
 
 table {
+    color: black;
 	  text-align: left;
 	  overflow: hidden;
 	  width: 80%;
@@ -53,14 +55,14 @@ table tr:nth-child(odd) {
 
 /* Background-color of the even rows */
 table tr:nth-child(even) {
-	  background-color: white;
+	  background-color: azure;
 }
 
 table th {
 	  background-color: white;
 }
 
-table td:first-child { color: white; }
+table td:first-child { color: black; }
 
 table tr:hover {
    background-color: #464A52;
@@ -280,4 +282,26 @@ form{
     display:inline;
   
 
+}
+
+.hi{
+font-size: 10px;
+ 
+  outline: none;
+  
+  
+  padding: 1em 3em 1.3em 1.5em;
+  margin: 0;
+
+  transition: border-color 0.2s;
+  border: 5px solid #EB5168;
+  border-radius: 5px;
+
+  background: #fff;
+  color: #555;
+  line-height: normal;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+    
 }

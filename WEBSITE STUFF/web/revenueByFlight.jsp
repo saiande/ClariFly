@@ -37,7 +37,7 @@
         <%
             try {
               Class.forName("org.gjt.mm.mysql.Driver");
-              con = DriverManager.getConnection("jdbc:mysql://localhost/clarifly","root" , "sql");
+              con = DriverManager.getConnection("jdbc:mysql://localhost/clarifly","root" , "Brooklyn29!");
               String flightNo = (String) request.getAttribute("num");
               int no = Integer.parseInt(flightNo);
               out.println(no);
@@ -56,7 +56,7 @@
         
         <TABLE BORDER="1">
             <TR>
-                <TH>RESERVATION NO</TH>
+                <TH>FLIGHT NO</TH>
                 <TH>TOTAL FARE</TH>
               
                 
@@ -64,7 +64,7 @@
             <% while(rs.next()){ %>
             <TR>
                 <TD> <%= rs.getString(1) %></td>
-                <TD> <%= rs.getString(2) %></TD>
+                <TD> <%= rs.getString(2) %></td>
             </TR>
             <% } %>
         </TABLE>

@@ -4,7 +4,7 @@
     Author     : sai
 --%>
 
-%@ page contentType="text/html" pageEncoding="UTF-8"%>
+<%@ page contentType="text/html" pageEncoding="UTF-8"%>
 <%@ page import = "java.sql.*"%>
 <%@ page import="java.sql.*" %>
 <%@ page import="java.util.Date" %>
@@ -22,29 +22,34 @@
         CallableStatement cs;
         ResultSet rs;
     %>
-    <body>
+    
         <header>
             <h1 id="logo-large" >clariFLY</h1>
-            <p><h2  >Customers on Flight  </h2></p>
+            <p><h1>Customers on Flight  </h1></p>
             
             <nav>
                 <ul>
                     <li><a href="managerHome.jsp">Home</a></li>
-                    
+                    <li><a href="customers.jsp">Customers</a></li>
+                    <li><a href="employees.jsp">Employees</a></li>
+                    <li><a href="flights.jsp">Flights</a></li>
+                    <li><a href="reservations.jsp">Reservations</a></li>
+                    <li><a href="sales.jsp">Sales</a></li>
                 </ul>
             </nav>
         </header>
-        
+        <body>
         
         <%
             try {
               Class.forName("org.gjt.mm.mysql.Driver");
-              con = DriverManager.getConnection("jdbc:mysql://localhost/clarifly","root" , "maroon596");
+              con = DriverManager.getConnection("jdbc:mysql://localhost/clarifly","root" , "Brooklyn29!");
               String flightNo = (String) request.getAttribute("num");
               int no = Integer.parseInt(flightNo);
-              out.println(no);
+//              out.println(no);
+                request.setAttribute("no", no);
               String id = (String) request.getAttribute("id");
-              out.println(id);
+//              out.println(id);
               
               cs = con.prepareCall("{call CustomersonGivenFlight(?, ?)}");
               cs.setInt(1, no);
@@ -58,6 +63,7 @@
         %>
         
         <TABLE BORDER="1">
+            
             <TR>
                 <TH>ID</TH>
                 <TH>FIRST NAME</TH>

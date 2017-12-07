@@ -72,10 +72,10 @@ public class signin extends HttpServlet {
                     manager = true;
                 }
                 if(manager){
-                    
+                    request.getRequestDispatcher("managerHome.jsp").forward(request, response);
                 }else{
                     request.setAttribute("username", username);
-                   
+                    
                    request.getRequestDispatcher("cust_rep.jsp").forward(request, response);
                 }
             }

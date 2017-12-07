@@ -41,7 +41,7 @@ public class CustomerServe extends HttpServlet {
 //            out.println("<h1>Servlet CustomerServe at " + request.getContextPath() + "</h1>");
 //            out.println("</body>");
 //            out.println("</html>");
-           out.println("here"); 
+          
             MyDB db = new MyDB();                                // OPENING MY DB OBJECT
            java.sql.Connection con = db.getCon();               // MAKING CONNECTION
            String flightNo = request.getParameter("flightNo");

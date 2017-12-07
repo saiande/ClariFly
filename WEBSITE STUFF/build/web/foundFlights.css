@@ -16,7 +16,27 @@ width: 100%;
 height: 90px;
 opacity: .8;
 }
+select {
+  font-size: 16px;
+  position: relative;
+  display: inline-block;
+  outline: none;
+  
+  display: block;
+  padding: 1.2em 3em 1.3em 1.5em;
+  margin: 0;
 
+  transition: border-color 0.2s;
+  border: 5px solid #EB5168;
+  border-radius: 5px;
+
+  background: #fff;
+  color: #555;
+  line-height: normal;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
 
 #logo{
 display: inline-block;
@@ -124,6 +144,30 @@ a{
     transition: all 0.4s;
 }
 #button:hover{
+    border-color: #EB5168;
+    transition: all 0.4s;
+    opacity: .8;
+    transform: scale(1.1);   
+   
+}
+#itin {
+  color: black;
+  background-color: greenyellow;
+  
+    border: 1px solid white;
+    padding: 10px 10px 10px 10px;
+    margin-left: 0px;
+    margin-right: 0px;
+    
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    min-width: 100px;
+    transition: all 0.4s;
+}
+#itin:hover{
     border-color: #EB5168;
     transition: all 0.4s;
     opacity: .8;

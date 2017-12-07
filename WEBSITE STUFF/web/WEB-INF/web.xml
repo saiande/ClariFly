@@ -36,6 +36,126 @@
         <servlet-name>searchRoundTrip</servlet-name>
         <servlet-class>searchRoundTrip</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>CustomerServe</servlet-name>
+        <servlet-class>CustomerServe</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>CustomerFlightServe</servlet-name>
+        <servlet-class>CustomerFlightServe</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>CustomerRevenueServe</servlet-name>
+        <servlet-class>CustomerRevenueServe</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>RevenueCityServe</servlet-name>
+        <servlet-class>RevenueCityServe</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>SalesReportServe</servlet-name>
+        <servlet-class>SalesReportServe</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>AirportFlightServe</servlet-name>
+        <servlet-class>AirportFlightServe</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>FlightReserveServe</servlet-name>
+        <servlet-class>FlightReserveServe</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ReserveCustomerServe</servlet-name>
+        <servlet-class>ReserveCustomerServe</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>createEmployee</servlet-name>
+        <servlet-class>createEmployee</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>EditRepServe</servlet-name>
+        <servlet-class>EditRepServe</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>EditRepServe2</servlet-name>
+        <servlet-class>EditRepServe2</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>DeleteRepServe</servlet-name>
+        <servlet-class>DeleteRepServe</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ManagerCreateAccount</servlet-name>
+        <servlet-class>ManagerCreateAccount</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>DeleteCusServe</servlet-name>
+        <servlet-class>DeleteCusServe</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>sendAuction</servlet-name>
+        <servlet-class>sendAuction</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>betAuction</servlet-name>
+        <servlet-class>betAuction</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CustomerServe</servlet-name>
+        <url-pattern>/CustomerServe</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CustomerFlightServe</servlet-name>
+        <url-pattern>/CustomerFlightServe</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CustomerRevenueServe</servlet-name>
+        <url-pattern>/CustomerRevenueServe</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>RevenueCityServe</servlet-name>
+        <url-pattern>/RevenueCityServe</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>SalesReportServe</servlet-name>
+        <url-pattern>/SalesReportServe</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AirportFlightServe</servlet-name>
+        <url-pattern>/AirportFlightServe</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>FlightReserveServe</servlet-name>
+        <url-pattern>/FlightReserveServe</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ReserveCustomerServe</servlet-name>
+        <url-pattern>/ReserveCustomerServe</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>createEmployee</servlet-name>
+        <url-pattern>/createEmployee</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>EditRepServe</servlet-name>
+        <url-pattern>/EditRepServe</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>EditRepServe2</servlet-name>
+        <url-pattern>/EditRepServe2</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>DeleteRepServe</servlet-name>
+        <url-pattern>/DeleteRepServe</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ManagerCreateAccount</servlet-name>
+        <url-pattern>/ManagerCreateAccount</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>DeleteCusServe</servlet-name>
+        <url-pattern>/DeleteCusServe</url-pattern>
+    </servlet-mapping>
     <servlet-mapping>
         <servlet-name>MyDB</servlet-name>
         <url-pattern>/MyDB</url-pattern>
@@ -64,7 +184,6 @@
         <servlet-name>searchRoundTrip</servlet-name>
         <url-pattern>/searchRoundTrip</url-pattern>
     </servlet-mapping>
-
     <servlet-mapping>
         <servlet-name>cust_by_acct</servlet-name>
         <url-pattern>/cust_by_acct</url-pattern>
@@ -72,6 +191,14 @@
     <servlet-mapping>
         <servlet-name>cust_by_acct2</servlet-name>
         <url-pattern>/cust_by_acct2</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>sendAuction</servlet-name>
+        <url-pattern>/sendAuction</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>betAuction</servlet-name>
+        <url-pattern>/betAuction</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

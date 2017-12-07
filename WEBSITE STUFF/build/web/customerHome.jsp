@@ -24,7 +24,7 @@
                     <form action ="tabs" method = "post"> 
                          <input type="hidden" name="username" value="<%=(String )request.getParameter("username") %>">
                          <input type="hidden" name="tab" value="acc"> 
-                        <li><button type = "submit" class = "button" >MY ACCOUNT</button> </li>
+                        <li><button type = "submit" class = "button" >MY RECCOMENDATIONS</button> </li>
                     </form>
                     <form action ="tabs" method = "post"> 
                          <input type="hidden" name="username" value="<%=(String )request.getParameter("username") %>"> 
@@ -43,7 +43,12 @@
                     <form action ="tabs" method = "post"> 
                          <input type="hidden" name="username" value="<%=(String )request.getParameter("username") %>"> 
                           <input type="hidden" name="tab" value="help"> 
-                        <li><button type = "submit" class = "button" >HELP</button> </li>
+                        <li><select name="HELP" value="HELP" onchange="location = this.value;">
+                                <option >HELP</option>
+                            <option value="https://docs.google.com/a/stonybrook.edu/document/d/1nVfI-FAZMTHMlStglX6QR4O7nQ53vwZxJfIkLLIqYsM/edit?usp=sharing">HELP MANAGER</option>
+                            <option value="https://docs.google.com/a/stonybrook.edu/document/d/11Tlfvj21bgbuI-BSpa0dwPs0FJPdm-Jwb-UuyE5EE90/edit?usp=sharing">HELP REP</option>
+                            <option value="https://docs.google.com/a/stonybrook.edu/document/d/1NkhBWbFPCjgqBYZgST5U4G-DqHbIpJBcySO1E-jFMrc/edit?usp=sharing">HELP CUSTOMER</option>
+                           </select> </li>
                     </form>
                 </ul>
             </nav>

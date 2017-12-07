@@ -41,15 +41,12 @@ public class CustomerRevenueServe extends HttpServlet {
 //            out.println("</body>");
 //            out.println("</html>");
 
-           MyDB db = new MyDB();                                // OPENING MY DB OBJECT
+            MyDB db = new MyDB();                                // OPENING MY DB OBJECT
            java.sql.Connection con = db.getCon();               // MAKING CONNECTION
-           String flightNo = request.getParameter("flightNo");
-           out.println("flightNo: "+flightNo);
-           request.setAttribute("num", flightNo);
-           String airlineID = request.getParameter("airlineID");
-           out.println("airlineID: "+airlineID);
-           request.setAttribute("id", airlineID);
-           request.getRequestDispatcher("revenueByFlight.jsp").forward(request, response);
+            String accountNo = request.getParameter("accountNo");
+           out.println("accountNo: "+accountNo);
+           request.setAttribute("num", accountNo);
+           request.getRequestDispatcher("revenueByCustomer.jsp").forward(request, response);
         }
     }
 
