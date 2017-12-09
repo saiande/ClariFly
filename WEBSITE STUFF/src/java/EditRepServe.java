@@ -43,6 +43,7 @@ public class EditRepServe extends HttpServlet {
             String updated = "not";
             out.println("here");
             while(rs.next()){
+                updated = "yes";
 //                String fname = rs.getString(1);
 //                String lname = rs.getString(2);
 //                String address = rs.getString(3);
@@ -72,6 +73,10 @@ public class EditRepServe extends HttpServlet {
                 request.getRequestDispatcher("customerRepEdit.jsp").forward(request, response);
                 
             }
+                request.setAttribute("updated", updated);
+                
+                request.getRequestDispatcher("employees.jsp").forward(request, response);
+            
         } catch (SQLException ex) {
             Logger.getLogger(cust_by_acct.class.getName()).log(Level.SEVERE, null, ex);
         }

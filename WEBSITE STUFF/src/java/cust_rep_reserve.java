@@ -117,6 +117,14 @@ public class cust_rep_reserve extends HttpServlet {
             cs.setInt(12,legNo);
 
             cs.executeQuery();
+            
+            cs = db.getCon().prepareCall("{call EditSeatsRemaining(?,?,?,?)}");
+            cs.setString(1,airlineId);
+            cs.setInt(2,flightNo);
+            cs.setInt(3,legNo);
+            cs.setInt(4,tickets);
+            cs.executeQuery();
+            
             request.setAttribute("username", username);
             request.getRequestDispatcher("cust_rep_reservation_success.jsp").forward(request, response);
         }

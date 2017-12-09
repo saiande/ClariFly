@@ -98,9 +98,9 @@ public class EditRepServe2 extends HttpServlet {
             cs.setInt(1,id);
             ResultSet rs = cs.executeQuery();
             //out.println(email);
-            String updated = "true";
+            String updated = "false";
             while(rs.next()){
-                
+                    updated = "true";
 //                String fname = rs.getString(1);
 //                String lname = rs.getString(2);
 //                String address = rs.getString(3);
@@ -112,24 +112,20 @@ public class EditRepServe2 extends HttpServlet {
 //                String email = rs.getString(9);
 //                int rating = rs.getInt(10);
                 request.setAttribute("id", eid);
-                out.println("1");
                 request.setAttribute("fname", rs.getString(1));
                 request.setAttribute("lname", rs.getString(2));
                 request.setAttribute("address", rs.getString(3));
                 request.setAttribute("city", rs.getString(4));
-                out.println("1");
 
                 request.setAttribute("state", rs.getString(5));
                 request.setAttribute("zipcode", rs.getString(6));
                 request.setAttribute("telephone", rs.getString(7));
                 request.setAttribute("manager", rs.getString(8));
-                out.println("1");
 
                 request.setAttribute("hr", rs.getString(9));
 //                request.setAttribute("rating", rs.getString(10));
 //                request.setAttribute("preference", rs.getString(11));
                 request.setAttribute("updated", updated);
-                out.println("1");
 //                out.println(request.getAttribute("email"));
                 request.getRequestDispatcher("customerRepSuccess.jsp").forward(request, response);
                 

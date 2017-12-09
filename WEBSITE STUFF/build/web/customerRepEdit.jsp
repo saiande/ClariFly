@@ -20,6 +20,7 @@
     <%!
         String fname, lname, address, city, state, telephone, manager, hr;
         String zipcode, updated, empID;
+        
      %>
       <header>
          <img style="position: fixed;"id = "logo" src="clariFLY.png" alt="logo">
@@ -58,6 +59,7 @@
         manager = (String)request.getAttribute("manager");
         updated = (String)request.getAttribute("updated");
         hr = (String)request.getAttribute("hr"); 
+        String updated = (String)request.getAttribute("updated");
      %>
      <div style ="margin-left: 35%">
          <h1>Edit Customer Information</h1>
@@ -75,11 +77,7 @@
         <label>Hourly Rate:</label> <input id="fix" class = "textbox" type = "text" name="HR" value="<%=Double.parseDouble(hr)%>"   required> <br> 
        <input <button class = "button" type="Submit" value="Submit"/>
        </form>
-        <%
-           if(!request.getAttribute("updated").equals("not")){
-       %>
-       UPDATE SUCCESS
-       <% } %>
+       
 </div>
         </body>
 </html>
